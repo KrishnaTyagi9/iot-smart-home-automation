@@ -1,0 +1,9 @@
+column,description,type,handling_note
+timestamp,Date and time associated with the record,Datetime,Parse and sort chronologically
+device_id,Identifier assigned to a device,Categorical/string,Do not treat as a measurement
+sensor_type,Sensor/device category,Categorical/string,Use to interpret sensor-specific values
+room,Room label associated with the record,Categorical/string,Broad room labels only
+temperature_C,Temperature in degrees Celsius,Numeric,Check plausible bounds
+humidity_pct,Relative humidity percentage,Numeric,Expected range 0–100%
+value,Generic sensor/device value,Numeric,Unit and meaning depend on sensor_type; not defined globally
+alert_flag,Provided alert indicator,Binary label,Treat as supplied label until rule and ground truth are verified
